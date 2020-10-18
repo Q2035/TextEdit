@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="3 seconds">
+    <!-- 日志地址 -->
+    <property name="LOG_DIR" value="logs/" />
+    <property name="APP_NAME" value="ctsimdm" />
+    <property name="MAX_HISTORY" value="90"/>
+
+    <!-- 控制台输出日志 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{26} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- 文件输出日志(Default) -->
+    <appender name="default-log-file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_DIR}/${APP_NAME}-today.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${APP_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <Pattern>[%d{HH:mm:ss}] [%thread] |%level| %marker %logger{50} -> %X{rpid} %msg %n%ex</Pattern>
+        </encoder>
+    </appender>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="default-log-file"/>
+    </root>
+</configuration>
