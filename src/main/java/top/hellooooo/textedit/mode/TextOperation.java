@@ -7,7 +7,7 @@ package top.hellooooo.textedit.mode;
  */
 public enum TextOperation {
 
-    DEFAULT_MODE(0),VISUAL_MODE(1), INSERT_MODE(2);
+    DEFAULT_MODE(0), VISUAL_MODE(1), INSERT_MODE(2);
 
     private Integer operation;
 
