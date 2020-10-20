@@ -3,15 +3,18 @@ package top.hellooooo.textedit.mode;
 /**
  * @Author Q
  * @Date 19/10/2020 14:38
- * @Description
+ * @Description 文本操作
+ *      insert
+ *      delete
+ *
  */
-public enum TextOperation {
+public enum EditOperationEnum {
 
-    DEFAULT_MODE(0), VISUAL_MODE(1), INSERT_MODE(2);
+    INSERT(0), DELETE(1), INSERT_MODE(2);
 
     private Integer operation;
 
-    TextOperation(Integer operation) {
+    EditOperationEnum(Integer operation) {
         this.operation = operation;
     }
 

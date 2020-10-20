@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="3 seconds">
     <!-- 日志地址 -->
     <property name="LOG_DIR" value="logs/" />
-    <property name="APP_NAME" value="ctsimdm" />
+    <property name="APP_NAME" value="textedit" />
     <property name="MAX_HISTORY" value="90"/>
 
     <!-- 控制台输出日志 -->
