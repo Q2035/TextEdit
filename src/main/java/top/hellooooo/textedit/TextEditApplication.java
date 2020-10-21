@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.util.StringUtils;
 import top.hellooooo.textedit.config.TextEditConfig;
+import top.hellooooo.textedit.util.screen.ScreenUtil;
 
 /**
  * @Author Q
@@ -22,9 +23,14 @@ public class TextEditApplication {
 //        没有指定参数
         if (args.length == 0) {
             logger.debug("Lack of file name");
+
         } else {
             logger.debug("Provide the file {}", args[0]);
             
         }
+        System.out.println("Before");
+        ScreenUtil screenUtil = applicationContext.getBean(ScreenUtil.class);
+        screenUtil.clearScreen();
+        System.out.println("After");
     }
 }

@@ -6,4 +6,5 @@ package top.hellooooo.textedit.text;
  * @Description
  */
 public class TextWriter {
+
 }
