@@ -9,13 +9,19 @@
     <artifactId>textedit</artifactId>
     <version>1.0.0.SNAPSHOT</version>
 
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.2.2.RELEASE</version>
+    </parent>
+
     <dependencies>
-<!--        导入Spring依赖-->
+
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.2.9.RELEASE</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
 <!--        导入日志框架-->
         <dependency>
             <groupId>ch.qos.logback</groupId>
